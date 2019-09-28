@@ -34,7 +34,7 @@ function totalRevenue(drivers) {
   const addRevenue = function(agg, el, i, arr) {
     return agg + el.revenue;
   }
-  return drivers.reduce(addRevenue()
+  return drivers.reduce(addRevenue, 0);
 }
 
 function averageRevenue(drivers) {
