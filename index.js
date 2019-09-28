@@ -38,7 +38,8 @@ function totalRevenue(drivers) {
 }
 
 function averageRevenue(drivers) {
-  const findMean = function(agg, el, i, arr) {
-    return agg + 
+  const findTotal = function(agg, el, i, arr) {
+    return agg + el.revenue;
   }
+  return drivers.reduce(findTotal, 0)/drivers.length;
 }
